@@ -32,26 +32,10 @@ public class CharacterInput : MonoBehaviour
         //interact with objects controller
         if(Input.GetKeyDown(KeyCode.E))
         {
-
-            //find any objects we are looking at
-            GameObject[] lookingAt;
-            lookingAt = GameObject.FindGameObjectsWithTag("mouseOver");
-
-            //toggle their interaction
-            foreach(GameObject thisObject in lookingAt)
-            {
-                InteractableObject thisInteraction = thisObject.GetComponent<InteractableObject>();
-                thisInteraction.ToggleInteraction();
-            }
-
-            //do the same for held objects, as if an object is held then we always want to interact with it
-            lookingAt = GameObject.FindGameObjectsWithTag("Held");
-
-            foreach (GameObject thisObject in lookingAt)
-            {
-                InteractableObject thisInteraction = thisObject.GetComponent<InteractableObject>();
-                thisInteraction.ToggleInteraction();
-            }
+            //draw a ray in 3d worldspace to see what object you are interacting with
+            //then take that objects collidor and get the objects interractable if it has one
+            //then toggle interaction
+            //that gameobject will have a script with an event that reads when interaction is toggled and will know what to do with it
         }
 
 
