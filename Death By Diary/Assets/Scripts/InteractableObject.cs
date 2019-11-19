@@ -11,6 +11,12 @@ public class InteractableObject : MonoBehaviour
     //boolean value stores whether the gameobjects interaction has been voided and is no longer available
     private bool interactionVoided;
 
+    //the materials object color before being highlighted
+    private Color startcolor;
+
+    //the renderer needed to alter the color of the object
+    private Renderer renderer;
+
     public bool Interaction { get { return interaction; } }
     public bool InteractionVoided { get { return interactionVoided; } }
 
@@ -19,12 +25,13 @@ public class InteractableObject : MonoBehaviour
     {
         interactionVoided = false;
         interaction = false;
+        renderer = this.gameObject.GetComponent<Renderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     //invokable method to toggle whether being interacted with
@@ -60,5 +67,21 @@ public class InteractableObject : MonoBehaviour
     public void VoidInteractions()
     {
         interactionVoided = true;
+    }
+
+    private void OnMouseEnter()
+    {
+        startcolor = renderer.material.color;
+        renderer.material.color = new Color(2, 2, 0);
+        this.gameObject.tag = "mouseOver";
+    }
+
+    private void OnMouseExit()
+    {
+        renderer.material.color = startcolor;
+        if (this.gameObject.tag == "mouseOver")
+        {
+            this.gameObject.tag = "Untagged";
+        }
     }
 }
