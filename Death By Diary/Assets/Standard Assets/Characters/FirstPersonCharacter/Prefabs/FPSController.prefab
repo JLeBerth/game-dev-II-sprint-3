@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6446256226726500388}
   m_Layer: 0
   m_Name: FPSController
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -304,6 +304,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: {fileID: 0}
   canvasObject: {fileID: 0}
+  visibleText: 0
+  controller: {fileID: 11400000}
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0
