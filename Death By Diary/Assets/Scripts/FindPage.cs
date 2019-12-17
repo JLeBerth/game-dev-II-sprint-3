@@ -98,6 +98,11 @@ public class FindPage : MonoBehaviour
             {
                 shownPage.SetActive(true);
             }
+
+	    else
+	    {
+		cInput.SetText("No Relevant Info On This Page");
+  	    }
         }
 
 

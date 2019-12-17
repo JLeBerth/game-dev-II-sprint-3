@@ -11791,6 +11791,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6859751199849253328, guid: c4b380323577135449579295a17f2ed1,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859751199849253328, guid: c4b380323577135449579295a17f2ed1,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859751199849253328, guid: c4b380323577135449579295a17f2ed1,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6859751199849253359, guid: c4b380323577135449579295a17f2ed1,
         type: 3}
       propertyPath: m_Enabled
@@ -11800,6 +11815,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_BlockingMask.m_Bits
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859751199925502681, guid: c4b380323577135449579295a17f2ed1,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859751199925502681, guid: c4b380323577135449579295a17f2ed1,
+        type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859751199925502681, guid: c4b380323577135449579295a17f2ed1,
+        type: 3}
+      propertyPath: m_FontData.m_AlignByGeometry
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859751199925502681, guid: c4b380323577135449579295a17f2ed1,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859751199925502681, guid: c4b380323577135449579295a17f2ed1,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4b380323577135449579295a17f2ed1, type: 3}
@@ -15569,7 +15609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pageNumber: 5
-  shownPage: {fileID: 0}
+  shownPage: {fileID: 678926396}
 --- !u!65 &4812447669836624286
 BoxCollider:
   m_ObjectHideFlags: 0

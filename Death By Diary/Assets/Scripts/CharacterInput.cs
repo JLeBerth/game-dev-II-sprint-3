@@ -15,9 +15,11 @@ public class CharacterInput : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+	
         canvasObject.SetActive(false);
         visibleText = false;
         events = this.gameObject.GetComponent<EventSystem>();
+	
     }
 
     // Update is called once per frame
@@ -75,11 +77,21 @@ public class CharacterInput : MonoBehaviour
 
         input.ActivateInputField();
         input.Select();
+
+        input.textComponent.horizontalOverflow = HorizontalWrapMode.Wrap;
+        input.transform.localScale = new Vector3(3, 3, 3);
+        input.lineType = InputField.LineType.MultiLineSubmit;
+        input.textComponent.fontSize = 16;
         
     }
 
     public string ReturnText()
     {
         return input.textComponent.text;
+    }
+
+    public void SetText(string toSet)
+    {
+        input.text = toSet;
     }
 }
